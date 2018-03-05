@@ -4,18 +4,18 @@ import (
 	"fmt"
 )
 
-type ConfigNotLoadedError struct { }
+type ConfigNotLoadedError struct{}
 
 type KeyTooYoungError struct {
 	key string
 }
 
-type MultipleKeysFoundError struct { }
+type MultipleKeysFoundError struct{}
 
-type NoKeysFoundError struct { }
+type NoKeysFoundError struct{}
 
 func (e *ConfigNotLoadedError) Error() string {
-  return fmt.Sprintf("Unable to load SDK config")
+	return fmt.Sprintf("Unable to load SDK config")
 }
 
 func (e *KeyTooYoungError) Error() string {
