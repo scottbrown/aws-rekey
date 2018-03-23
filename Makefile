@@ -8,7 +8,6 @@ build.file := $(build.dir)/$(build.filename)
 dist.dir := $(pwd)/.dist
 
 build:
-	#go fmt
 	go build -o $(GOPATH)/bin/$(project.name) github.com/scottbrown/$(project.name)
 
 test:
