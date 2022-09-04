@@ -11,7 +11,7 @@ build:
 	go build -o $(build.file) github.com/scottbrown/$(project.name)
 
 test:
-	go test $(project.name)
+	go test ./...
 
 clean:
 	rm -rf $(build.dir)
