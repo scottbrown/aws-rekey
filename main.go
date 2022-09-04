@@ -52,7 +52,7 @@ func getCurrentAccessKey(cfg aws.Config) (string, error) {
 	now := time.Now().UTC()
 	logger.Printf("Now: %v", now)
 	elapsedHours := now.Sub(oldCreationDate).Hours()
-	logger.Printf("Elapsed hours: %d", elapsedHours)
+	logger.Printf("Elapsed hours: %f", elapsedHours)
 	if elapsedHours < 720 {
 		return oldAccessKeyId, &KeyTooYoungError{oldAccessKeyId}
 	}
